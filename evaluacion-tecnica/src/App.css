@@ -28,6 +28,7 @@
   color: white;
 }
 .main{
+  
   min-width: 100vh;
   background-color: hsl(3, 1%, 90%);
   display: flex;
@@ -77,6 +78,7 @@ button{
   color: #f2f2f2;
 }
 .plural {
+  position: relative;
   background-color: hsl(3, 1%, 98%);
   width: 600px;
   height: 500px;
