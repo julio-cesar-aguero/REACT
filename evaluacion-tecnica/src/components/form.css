@@ -1,0 +1,56 @@
+form {
+  left: 50%;
+  position: absolute;
+  width: 500px;
+  height: 50%;
+  display: grid;
+  grid-column: auto;
+  padding: 2em;
+  background-color: brown;
+}
+.lista__empleados {
+  top: 40%;
+  left: 30%;
+  width: 600px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  z-index: 10;
+  background-color: #f2f2f2;
+  padding: 2.3em;
+  border-radius: 10px;
+  color: #61dafb;
+  overflow: hidden;
+}
+
+.item{
+    background-color: #f2f2f2;
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.2em;
+    border-radius: 10px;
+
+    
+}
+.buttons-item {
+    left: 65%;
+
+}
+.button__delete {
+  background-color: red;
+}
+input {
+  width: 40%;
+  margin-top: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
