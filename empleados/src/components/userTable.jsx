@@ -1,9 +1,12 @@
 import React from "react";
 const userTable = (props) => {
   return (
+    <>
+    <button onClick={() => { props.setEditing(true);}}>Nuevo</button>
     <table>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>Username</th>
           <th>Actions</th>
@@ -17,15 +20,15 @@ const userTable = (props) => {
             <td>{user.username}</td>
             <td>
               <button
-                className="button muted-button"
+                className="button accent-button"
                 onClick={() => {
-                  props.edit(user);
+                  props.editUser(user);
                 }}
               >
-                Edit
+              Edit
               </button>
               <button
-                className="button muted-button"
+                className="button "
                 onClick={() => {
                   console.log("michi", props.users);
                   props.deleteUser(user.id);
@@ -38,6 +41,7 @@ const userTable = (props) => {
         ))}
       </tbody>
     </table>
+    </>
   );
 };
 export default userTable;

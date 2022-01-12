@@ -7,12 +7,12 @@ import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
   const usersData = [
-    { id: uuidv4(), name: "gerum", username: "Michi" },
+    { id: uuidv4(), name: "julio", username: "usr-julio" },
 
-    { id: uuidv4(), name: "toro", username: "Max" },
+    { id: uuidv4(), name: "pablo", username: "usr-pablo" },
 
-    { id: uuidv4(), name: "zoe", username: "gǘera" },
-    { id: uuidv4(), name: "zoa", username: "gǘera" },
+    { id: uuidv4(), name: "diana", username: "usr-diana" },
+    { id: uuidv4(), name: "anahi", username: "usr-anahi" },
   ];
 
   //Estado inicial del objeto usersData
@@ -31,12 +31,20 @@ const App = () => {
   };
 
   //Editar Usuarios
-  const [editing, setEditing] = useState(true);
+  const [editing, setEditing] = useState(false);
 
   const[currentUser, setCurrentUser] = useState({
     id: null, name:'',username:''
   });
-  
+  const editUser = (user) =>{
+    console.log("editar",user)
+    setEditing(true);
+		setCurrentUser(user);
+  }
+  const updateUser = (id, updateUser) =>{
+    setEditing(false)
+    setUsers(users.map(user => (user.id === id ? updateUser : user)))
+  }
  
   return (
     <>
@@ -45,12 +53,16 @@ const App = () => {
         <div className="flex-row">
           <div className="flex-large">
             {editing ? (
-              <div>
+              <div className="formGen">
                 <h2>Editar Usuario</h2>
-                <EditUserForm />
+                <EditUserForm
+                
+                currentUser={currentUser}
+                updateUser={updateUser}
+                />
               </div>
             ) : (
-              <div>
+              <div className="formGen">
                 <h2>Agregar Usuario</h2>
                 <AddUserForm addUser={addUser} />
               </div>
@@ -61,7 +73,8 @@ const App = () => {
             <UserTable
               users={users}
               deleteUser={deleteUser}
-              setEditing={setEditing}
+              editUser={editUser}
+              
               />
           </div>
         </div>
