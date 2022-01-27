@@ -1,0 +1,20 @@
+
+.page {
+  width: 100vw;
+  background-color: aqua;
+}
+.page ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+}
+.page button{
+    margin: 0.5em;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #3333;
+    color: aliceblue;
+}
