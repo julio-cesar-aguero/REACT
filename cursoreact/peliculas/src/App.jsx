@@ -5,7 +5,7 @@ import PageWrapper from "./PageWrapper";
 function App() {
   const peliculas = [
     {
-      titulo: "oblivion (2012)",
+      titulo: "oblivion (2022)",
       calificacion: "8.1",
       director: "Joss Whedon",
       actores: "Robert Downey Jr., Chris Evans, Chris Hemsworth",
